@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--view层模板-->
+<div id="app">
+<!--    v-on:click-->
+<!--输入的文本：<input type="text" v-model="message"/>{{message}}-->
+
+<!--    性别：<input type="radio" name="sex" value="男" v-model="check"/>男-->
+<!--    <input type="radio" name="sex" value="女"/>女  {{check}}-->
+<!--</div>-->
+<select v-model="selected">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option>C</option>
+    <option disabled value="">-------</option>
+</select>{{selected}}
+    <!--1.导入vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js">
+</script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            selected:''
+        }
+    });
+</script>
+</body>
+</html>
